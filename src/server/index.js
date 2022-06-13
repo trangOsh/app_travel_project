@@ -4,7 +4,9 @@ var path = require('path');
 const express = require("express");
 const bodyParser = require('body-parser');
 
-console.log(process.env.API_KEY)
+const api= process.env.API_KEY;
+console.log('Api', api)
+console.log("hello",process.env.API_KEY)
 // create app
 const app = express();
 
