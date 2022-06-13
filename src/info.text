@@ -44,3 +44,13 @@
   }
 
   //https://knowledge.udacity.com/questions/853597
+
+
+  npm i -D style-loader@^0.23.1 node-sass@^4.14.1 css-loader@^3.6.0 sass-loader@^7.3.1
+
+  Troubleshooting: If you are facing any dependency issues on the local machine or in the workspace, please install the versions as shared on the previous page "Webpack and Sass".
+
+npm i -D style-loader@^0.23.1 node-sass@^4.14.1 css-loader@^3.6.0 sass-loader@^7.3.1
+
+npm i -D @babel/core@^7.5.4 @babel/preset-env@^7.5.4 babel-loader@^8.0.6
+
