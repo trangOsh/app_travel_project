@@ -24,11 +24,15 @@ app.use(express.json())
 const cors = require('cors');
 
 app.use(cors());
+
+// change "src/client" to "dist"
+//app.use(express.static('src/client'))
 app.use(express.static('dist'))
 console.log("dirname0",__dirname)
 
 app.get('/', function(req, res){
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    //res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile('dist/index.html')
 })
 
 const port= 5005;
