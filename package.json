@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/index.js",
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev1": "webpack --config webpack.dev.js",
+    "build-dev": "webpack-dev-server --config webpack.dev.js --open"
   },
   "repository": {
     "type": "git",
@@ -29,6 +32,8 @@
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "babel-loader": "^8.2.5",
-    "html-webpack-plugin": "^5.5.0"
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-dev-server": "^4.9.2"
   }
 }
