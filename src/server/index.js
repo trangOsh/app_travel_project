@@ -2,8 +2,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 var path = require('path');
 const express = require("express");
-const bodyParser = require('body-parser');
-const mockAPIResponse= require("./server/mockAPI")
+//var bodyParser = require('body-parser');
+const mockAPIResponse= require("./mockAPI.js")
 
 const api= process.env.API_KEY;
 console.log('Api', api)
@@ -11,9 +11,11 @@ console.log("hello",process.env.API_KEY)
 // create app
 const app = express();
 
+app.use(express.json())
+
 // body parse as middle ware
-app.use(bodyParser.urlencoded({extented: false}));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extented: false}));
+// app.use(bodyParser.json());
 
 
 
