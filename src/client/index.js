@@ -1,4 +1,3 @@
-console.log("hello")
 
 import (handleSubmit) from './js/formHandler';
 

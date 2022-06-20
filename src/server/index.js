@@ -3,6 +3,7 @@ dotenv.config();
 var path = require('path');
 const express = require("express");
 const bodyParser = require('body-parser');
+const mockAPIResponse= require("./server/mockAPI")
 
 const api= process.env.API_KEY;
 console.log('Api', api)
@@ -21,8 +22,8 @@ app.use(bodyParser.json());
 const cors = require('cors');
 
 app.use(cors());
-//app.use(express.static('dist'))
-//console.log("dirname0",__dirname)
+app.use(express.static('dist'))
+console.log("dirname0",__dirname)
 
 app.get('/', function(req, res){
     res.sendFile(path.resolve('src/client/views/index.html'))
