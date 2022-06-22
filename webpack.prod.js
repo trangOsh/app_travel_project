@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-wepback-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     entry:'./src/client/index.js',
@@ -21,13 +24,21 @@ module.exports = {
             {
                 test:/\.scss$/,
                 use:[ 'style-loader','css-loader', 'sass-loader']
+            },
+            {
+                test: /\.scss$/,
+                use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
             }
+        
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
             template: './src/client/view/index.html',
             filename:'./index.html',
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
         }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
@@ -41,6 +52,15 @@ module.exports = {
     
         new BundleAnalyzerPlugin()
     
-    ]
+    ],
+    optimization: {
+        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    },
+
 
 }
+
+
+// npm install mini-css-extract-plugin
+// npm install optimize-css-assets-webpack-plugin
+// npm install terser-webpack-plugin
