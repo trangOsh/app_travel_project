@@ -1,5 +1,5 @@
 function handleSubmit (event) {
-    function handleSubmit(event) {
+    
         event.preventDefault()
         const baseURL = "https://api.meaningcloud.com/sentiment-2.1?key=";
         // check what text was put into the form field
@@ -7,7 +7,7 @@ function handleSubmit (event) {
         Client.checkForName(formText)
     
         console.log("::: Form Submitted :::")
-        fetch('http://localhost:8082/test')
+        fetch('http://localhost:5006/test')
         .then(res => res.text())
         .then(function(res) {
             //console.log(res)
@@ -17,7 +17,7 @@ function handleSubmit (event) {
           // document.getElementById("agreement").innerH= "huhhahahahah";
         })
         
-    }
+    
 }
 
 export {handleSubmit}
