@@ -1,19 +1,32 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
-}
+// header {
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 10px 40px;
+// }
 
-.logo, .navigation {
+// .logo, .navigation {
    
-    margin: 10%;
-    border: 5px solid salmon;
-    width: 100px;
-    height:30px;
-    background-color: rgb(150, 79, 150);
-    border-radius: 20%;
-    text-align: center;
-    position:relative;
-    font-size: 100%;
+//     margin: 10%;
+//     border: 5px solid salmon;
+//     width: 100px;
+//     height:30px;
+//     background-color: rgb(150, 79, 150);
+//     border-radius: 20%;
+//     text-align: center;
+//     position:relative;
+//     font-size: 100%;
 
+// }
+#header {
+    font-size:50px;
+    align-items:stretch;
+    color:black;
+    width: 50%;
+    height: 50px;
+    position:absolute;
+    border: 2px purple;
+    padding:20px;
+    align-items: center;
+    margin:auto;
+    padding:50px;
 }

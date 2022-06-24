@@ -10,7 +10,7 @@ function handleSubmit (event) {
         fetch('http://localhost:5006/test')
         .then(res => res.text())
         .then(function(res) {
-            //console.log(res)
+            console.log(res)
             document.getElementById('results').innerHTML = res.message
             
            //console.log(apiSource)

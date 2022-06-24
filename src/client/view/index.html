@@ -8,32 +8,29 @@
 
     <body>
 
-        <header>
-            <h1> this is a demo for Travel-App-Testing before implementing the code</h1>
-            <div class="logo">
-                Logo
-            </div>
-            <div class="navigation">
-                navigation
-            </div>
-        </header>
+       <div id="container">
+            
+        <div class="header box" id="header">Trip Planner</div>
+        <div class="box" id="results">Trip Information
+            <div class="smallbox"id="destination"></div>
+            <div class="smallbox" id="departing"></div>
+            <div class="smallbox" id="counting-down">Counting down</div>
+            <div class="smallbox" id="place-photo"></div>
+        </div>
+        <div class="box input" id="enter">
+            <form>
+             <label>My trip: </label>
+             <input id="location" type="text" name="location" placeholder="Enter location">
+             <br><br>
+             <label>Departing: </label>
+             <input id="date" type="date" name="date">
+            </form>
+            
 
-        <main>
-            <section>
-                <form class="Input" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="" placeholder="Enter URL"> 
-                    <input id="submit" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
-
-            <section>
-                <div id=result_header>Form Results:</div>
-                <div id="results">
-                   
-                    
-                </div>
-            </section>
-        </main>
+        </div>
+       </div>>
+           
+          
 
         <footer>
             

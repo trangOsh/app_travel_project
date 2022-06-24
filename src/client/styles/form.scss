@@ -3,12 +3,42 @@ form {
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
-    margin: yellow 30px;
+    margin: rgb(255, 0, 255) 30px;
+    align-items: center;
+    position: relative;
 }
 
-input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
+// input {
+//     padding: 5px 20px;
+//     width: 50%;
+//     line-height: 16px;
+//     margin: 10px 0;
+//     align-items: center;
+//     position: relative;
+// }
+
+#location {
+   background-color: bisque;
+   padding: 5px;
+   width: 50%;
+   position:relative;
+   align-content: center;
+}
+ 
+
+#date {
+    background-color: bisque;
+    padding: 5px;
+    width: 50%;
+    position:relative;
+}
+
+#enter {
+    background: rgb(188, 199, 173);
+    border: solid 2px rgb(41, 29, 41);
+    width: 30%;
+    height:40%;
+    position:relative;
+    margin-bottom: 10%;
+    float: center;
 }
