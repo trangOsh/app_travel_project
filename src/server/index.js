@@ -31,8 +31,8 @@ app.use(express.static('dist'))
 console.log("dirname0",__dirname)
 
 app.get('/', function(req, res){
-    //res.sendFile(path.resolve('src/client/views/index.html'))
-    res.sendFile('dist/index.html')
+    res.sendFile(path.resolve('src/client/views/index.html'))
+    //res.sendFile('dist/index.html')
 })
 
 const port= 5006;
